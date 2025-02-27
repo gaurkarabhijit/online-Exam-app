@@ -1,0 +1,123 @@
+<!-- <form>
+    <input type="text" name="qno" placeholder="Enter qno " value="{{question.qno}}"></input>
+    <input type="text" name="qtext" placeholder="Enter question " value="{{question.qtext}}"></input>
+    <input type="text" name="answer" placeholder="Enter answer " value="{{question.answer}}"></input>
+    <input type="text" name="op1" placeholder="Enter op1 " value="{{question.op1}}" ></input>
+    <input type="text" name="op2" placeholder="Enter op2 " value="{{question.op2}}"></input>
+    <input type="text" name="op3" placeholder="Enter op3 " value="{{question.op3}}"></input>
+    <input type="text" name="op4" placeholder="Enter op4 " value="{{question.op4}}"></input>
+    <input type="text" name="subject" placeholder="Enter subject" value="{{question.subject}}"></input><br><br>
+
+    <input type="submit" value="addQuestion" formaction="/addQuestion">
+    <input type="submit" value="viewQuestion" formaction="/viewQuestion">
+    <input type="submit" value="deleteQuestion" formaction="/deleteQuestion">
+    <input type="submit" value="updateQuestion" formaction="/updateQuestion">
+</form>
+
+<span style="color:blueviolet">{{message}}</span> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Styled Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(120deg, #84fab0, #8fd3f4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            max-width: 450px;
+            width: 100%;
+        }
+
+        form input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        form input[type="text"]:focus {
+            border-color: #4caf50;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+            outline: none;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        form input[type="submit"] {
+            flex: 1; /* Allows equal sizing */
+            min-width: 100px;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background: linear-gradient(90deg, #4caf50, #81c784);
+            color: white;
+            font-size: 12px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        form input[type="submit"]:hover {
+            background: linear-gradient(90deg, #388e3c, #66bb6a);
+            transform: translateY(-2px);
+        }
+
+        form input[type="submit"]:active {
+            transform: translateY(0);
+        }
+
+        span {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 10px;
+            color: blueviolet;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" name="qno" placeholder="Enter qno" value="{{question.qno}}">
+        <input type="text" name="qtext" placeholder="Enter question" value="{{question.qtext}}">
+        <input type="text" name="answer" placeholder="Enter answer" value="{{question.answer}}">
+        <input type="text" name="op1" placeholder="Enter op1" value="{{question.op1}}">
+        <input type="text" name="op2" placeholder="Enter op2" value="{{question.op2}}">
+        <input type="text" name="op3" placeholder="Enter op3" value="{{question.op3}}">
+        <input type="text" name="op4" placeholder="Enter op4" value="{{question.op4}}">
+        <input type="text" name="subject" placeholder="Enter subject" value="{{question.subject}}">
+        
+        <div class="button-container">
+            <input type="submit" value="Add Question" formaction="/addQuestion">
+            <input type="submit" value="View Question" formaction="/viewQuestion">
+            <input type="submit" value="Delete Question" formaction="/deleteQuestion">
+            <input type="submit" value="Update Question" formaction="/UpdateQuestion">
+        </div>
+
+        <span>{{message}}</span>
+    </form>
+</body>
+</html>
+

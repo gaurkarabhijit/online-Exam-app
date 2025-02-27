@@ -1,0 +1,82 @@
+<!-- <h1 style="color:red ; font-size: large;"> please select subject </h1>
+
+<form>
+    <select name="subject">
+        <option>math</option>
+        <option>python</option>
+    </select>
+
+    <input type="submit" value="start test" formaction="/starttest">
+
+</form> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Subject</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #4caf50, #81c784);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            width: 300px;
+        }
+        h1 {
+            color: #ff5722;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            color: #333;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Please Select Subject</h1>
+        <form>
+            <select name="subject" required>
+                <option value="" disabled selected>Select a subject</option>
+                <option value="math">Math</option>
+                <option value="python">Python</option>
+            </select>
+            <input type="submit" value="Start Test" formaction="/starttest">
+        </form>
+    </div>
+</body>
+</html>

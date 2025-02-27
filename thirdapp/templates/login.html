@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style> 
+        body {
+    font-family: Arial, sans-serif;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#abs {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login-btn {
+    background: #6e8efb;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#login-btn:hover {
+    background: #5a7be3;
+}
+
+.links {
+    text-decoration: none;
+    color: #6e8efb;
+    font-size: 14px;
+}
+
+.links:hover {
+    text-decoration: underline;
+}
+
+div {
+    text-align: left;
+    margin: 10px 0;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+    </style>
+</head>
+<body>
+    <div id="abs">
+        <h1>Login</h1>
+        <form method="GET" action="/login/"> 
+            <input class="input-field" type="text" placeholder="Enter Username" name="username" required><br>
+            <input class="input-field" type="password" placeholder="Enter Password" name="password" required><br>
+            
+            <div>
+                <input type="checkbox" id="rememberMe" name="remember">
+                <label for="rememberMe">Remember Me</label>
+            </div>
+            
+            <a href="/forgot-password" class="links">Forgot password?</a><br>
+            <input id="login-btn" type="submit" value="Login"><br>
+            
+            <p>Don't have an account? <a href="/giveMeregister" class="links">Register</a></p>
+        </form>
+    </div>
+</body>
+</html>

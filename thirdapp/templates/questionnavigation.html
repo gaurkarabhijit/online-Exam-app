@@ -1,0 +1,163 @@
+<!-- <html>
+
+<html></html>
+
+<head>
+
+    <style>
+
+        input[type='text']
+        {
+            display: block;
+            margin: 10px;
+            padding: 20px;
+            width: 400;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <form>
+
+        <input type="text" name="qno" value="{{question.qno}}"> 
+        
+        <input type="text" name="qtext" value="{{question.qtext}}">
+
+        <input type="hidden" name="answer" value="{{question.answer}}">
+
+        <input type="radio" name="op" value="{{question.op1}}"> <span style="color:red"> {{question.op1}} </span>
+
+        <input type="radio" name="op" value="{{question.op2}}"> <span style="color:red"> {{question.op2}} </span>
+
+        <input type="radio" name="op" value="{{question.op3}}"><span style="color:red"> {{question.op3}} </span>
+
+        <input type="radio" name="op" value="{{question.op4}}"><span style="color:red"> {{question.op4}} </span>
+
+        <input type="hidden" type="text" name="subject" value="{{question.subject}}"><br><br>
+
+        <input type="submit" value="previous" formaction="/previousQuestion">
+        <input type="submit" value="next" formaction="/nextQuestion">
+        <input type="submit" value="endexam" formaction="/endexam">
+               
+
+    </form> -->
+
+
+    <html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        input[type="text"],
+        input[type="hidden"] {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 90%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        span {
+            color: #333;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            margin: 10px 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            background-color: #007bff;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        input[type="submit"]:nth-child(2) {
+            background-color: #28a745;
+        }
+
+        input[type="submit"]:nth-child(2):hover {
+            background-color: #218838;
+        }
+
+        input[type="submit"]:nth-child(3) {
+            background-color: #dc3545;
+        }
+
+        input[type="submit"]:nth-child(3):hover {
+            background-color: #c82333;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h2>Quiz Form</h2>
+        <input type="text" name="qno" value="{{question.qno}}" readonly>
+        <input type="text" name="qtext" value="{{question.qtext}}" readonly>
+
+        <input type="hidden" name="answer" value="{{question.answer}}">
+
+        <div>
+            <input type="radio" name="op" value="{{question.op1}}"> <span> {{question.op1}} </span>
+        </div>
+        <div>
+            <input type="radio" name="op" value="{{question.op2}}"> <span> {{question.op2}} </span>
+        </div>
+        <div>
+            <input type="radio" name="op" value="{{question.op3}}"> <span> {{question.op3}} </span>
+        </div>
+        <div>
+            <input type="radio" name="op" value="{{question.op4}}"> <span> {{question.op4}} </span>
+        </div>
+
+        <input type="hidden" type="text" name="subject" value="{{question.subject}}">
+
+        <div style="text-align: center;">
+            <input type="submit" value="Previous" formaction="/previousQuestion">
+            <input type="submit" value="Next" formaction="/nextQuestion">
+            <input type="submit" value="End Exam" formaction="/endexam">
+        </div>
+    </form>
+</body>
+</html>

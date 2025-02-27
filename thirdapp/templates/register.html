@@ -1,0 +1,93 @@
+<!-- <form>
+    <input typr="text" placeholder="enter user name" name="username">
+    <input  type="text"  placeholder="enter password" name="password">
+    <input type="text" placeholder="enter mobile number" name="mobno">
+   
+    <input type="submit" value="register" formaction="/register">
+    
+</form>
+
+
+<span style="color:red; font-size: large;"> {{message}} </span> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="./style.css"> <!-- External CSS file -->
+
+    <!-- Inline CSS (optional, if you don't use an external CSS file) -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        body {
+            background: url('./bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        .registration-form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 350px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .registration-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .registration-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .registration-form input {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: none;
+            border-radius: 5px;
+        }
+        .registration-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .registration-form button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-form">
+        <h2>Registration Form</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="mobno">Mobile Number:</label>
+            <input type="tel" id="mobno" name="mobno" required>
+
+            <button type="submit" formaction="/register">Register</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
